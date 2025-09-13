@@ -1,0 +1,2 @@
+config SHIELD_nitsud60percent
+    def_bool $(sheild_list_contains, nitsud60percent)
