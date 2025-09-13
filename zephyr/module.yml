@@ -1,4 +1,4 @@
-name: zmk-keyboard-nitsud60percent
+name: zmk-keyboard-nitsud
 build:
   settings:
     board_root: .
