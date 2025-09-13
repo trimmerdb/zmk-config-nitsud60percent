@@ -12,6 +12,6 @@ manifest:
       import: app/west.yml
     - name: zmk-config-nitsud60percent
       url: https://github.com/trimmerdb/zmk-config-nitsud60percent
-      revision: main
+      revision: master
   self:
     path: config
