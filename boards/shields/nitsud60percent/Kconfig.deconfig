@@ -1,6 +1,6 @@
 if SHEILD_NITSUD60PERCENT
 
 config ZMK_KEYBOARD_NAME
-    default "nitsud60percent"
+    default "nitsud"
 
 endif
