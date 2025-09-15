@@ -49,20 +49,11 @@ RC(7,0)  RC(6,0)  RC(7,1)  RC(6,1)  RC(7,2)  RC(6,2)  RC(7,3)  RC(6,3)  RC(7,4) 
 RC(9,0)  RC(8,0)  RC(9,1)                             RC(8,3)                             RC(9,5)  RC(8,5)  RC(9,6)  RC(8,6)
         >;
     };
-
-&led_strip {
-	chain-length = <62>;
-	map = <
-	    12 11 10  9  8  7  6  5  4  3  2  1  0
-        26 25 24 23 22 21 20 19 18 17 16 15 14 13
-        39 38 37 36 35 34 33 32 31 30 29 28    27
-        53 52 51 50 49 48 47 46 45 44 43 42 41 40
-        61 60 59          58          57 56 55 54
-	>;
-};
-
-&ws2812 {
-	chain-length = <103>;
-};
-
+    
+    sk6812: ws2812 {
+        compatible = "worldsemi,ws2812";
+        chain-length = <62>;         
+        color-order = "GRBW";           
+        data-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
+    };
 };
