@@ -91,3 +91,7 @@
                             LED_COLOR_ID_BLUE>;
         };
     };
+
+    aliases {
+    led_strip = &led_strip;  /* critical for ZMK to bind underglow */
+};

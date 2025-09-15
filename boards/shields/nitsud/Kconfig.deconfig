@@ -5,9 +5,7 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_RGB_UNDERGLOW
     default y
-    select WS2812_STRIP         
-
-config ZMK_RGB_UNDERGLOW_ON_START
-    default y
+    select WS2812_STRIP
+    select SPI 
 
 endif # SHIELD_NITSUD
