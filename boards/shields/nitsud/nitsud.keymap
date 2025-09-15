@@ -34,7 +34,7 @@
 // |  BT 1   |   |      |   | HUEUP | SATUP | BRIUP | SPDUP |   |     |    |     |     |EFFECT REV|
 // |   BT 2   |    |      |    | HUEDN | SATDN | BRIDN | SPDDN |   |     |   |     |  EFFECT FORW |
 // |    BT 3     |     |      |      |     |     |     |     |     |     |     |     |     |      |
-// |   BT 4  |      |      |             TOG RGB                | PRT SCR |       |       |  DEL  |
+// |   BT 4  |      |      |             TOG RGB                | trans |       |       |  DEL  |
 // ------------------------------------------------------------------------------------------------
             bindings = <
     &bt BT_CLR    &kp F1   &kp F2   &kp F3  &kp F4           &kp F5           &kp F6           &kp F7           &kp F8  &kp F9  &kp F10   &kp F11  &kp F12  
