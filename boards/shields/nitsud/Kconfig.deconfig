@@ -7,6 +7,5 @@ config ZMK_KEYBOARD_NAME
 config ZMK_RGB_UNDERGLOW
 	default y
 	select WS2812_STRIP
-    select LED_STRIP_RGBW
 
 endif # ZMK_BACKLIGHT
