@@ -4,3 +4,11 @@ config ZMK_KEYBOARD_NAME
     default "nitsud"
 
 endif
+
+config ZMK_RGB_UNDERGLOW
+	default y
+	select WS2812_STRIP
+    select LED_STRIP_RGBW
+	select SPI
+
+endif # ZMK_BACKLIGHT
