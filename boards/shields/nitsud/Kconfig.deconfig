@@ -1,11 +1,13 @@
-if SHEILD_NITSUD
+if SHIELD_NITSUD
 
 config ZMK_KEYBOARD_NAME
     default "nitsud"
 
-
 config ZMK_RGB_UNDERGLOW
-	default y
-	select WS2812_STRIP
+    default y
+    select WS2812_STRIP         
 
-endif # ZMK_BACKLIGHT
+config ZMK_RGB_UNDERGLOW_ON_START
+    default y
+
+endif # SHIELD_NITSUD
