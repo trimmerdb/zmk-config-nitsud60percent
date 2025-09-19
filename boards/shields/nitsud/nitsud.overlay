@@ -92,3 +92,11 @@
                             LED_COLOR_ID_BLUE>;
         };
     };
+    
+/ {
+    behaviors {
+        suspend: suspend_behavior {
+            compatible = "zmk,behavior-suspend";
+        };
+    };
+};
