@@ -3,9 +3,12 @@ if SHIELD_NITSUD
 config ZMK_KEYBOARD_NAME
     default "nitsud"
 
+config ZMK_PM_SOFT_OFF
+	default y
+
 config ZMK_RGB_UNDERGLOW
     default y
     select WS2812_STRIP
-    select SPI 
+    select SPI
 
 endif # SHIELD_NITSUD
