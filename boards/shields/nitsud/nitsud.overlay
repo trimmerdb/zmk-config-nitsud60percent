@@ -91,3 +91,17 @@
                             LED_COLOR_ID_BLUE>;
         };
     };
+
+
+&power {
+    wakeup-source = <&gpio1 6 GPIO_ACTIVE_HIGH>;  // Example: Only GPIO15 wakes
+};
+
+/ {
+    behaviors {
+        suspend: suspend_behavior {
+            compatible = "zmk,behavior-suspend";
+            label = "SUSPEND";
+        };
+    };
+};
