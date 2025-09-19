@@ -54,13 +54,14 @@
     	keys {
 		compatible = "gpio-keys";
 		wakeup_key: wakeup_key {
-			gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+			gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
 	wakeup_source: wakeup_source {
 		compatible = "zmk,gpio-key-wakeup-trigger";
 		trigger = <&wakeup_key>;
+        extra-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
 		wakeup-source;
 	};
 
