@@ -92,7 +92,9 @@
         };
     };
 
-soft_off_wakers {
-    compatible = "zmk,soft-off-wakeup-sources";
-    wakeup-sources = <&default_kscan>;
+/ {
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&default_kscan>;
+    };
 };
