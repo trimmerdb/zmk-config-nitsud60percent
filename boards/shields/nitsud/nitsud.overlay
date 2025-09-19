@@ -13,6 +13,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "default_kscan";
         diode-direction = "col2row";
+        wakeup-source;
 
         row-gpios
             = <&pro_micro 19  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
@@ -91,11 +92,6 @@
                             LED_COLOR_ID_BLUE>;
         };
     };
-
-
-&power {
-    wakeup-source = <&gpio1 6 GPIO_ACTIVE_HIGH>;  // Example: Only GPIO15 wakes
-};
 
 / {
     behaviors {
