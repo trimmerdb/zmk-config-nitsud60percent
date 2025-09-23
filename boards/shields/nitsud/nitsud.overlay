@@ -52,6 +52,13 @@
         >;
     };
 
+    keys {
+		compatible = "gpio-keys";
+		wakeup_key: wakeup_key {
+			gpios = <&gpio1 6 GPIO_ACTIVE_LOW>;
+		};
+	};
+
 	wakeup_source: wakeup_source {
 		compatible = "zmk,gpio-key-wakeup-trigger";
 		trigger = <&wakeup_key>;
