@@ -51,6 +51,13 @@
             RC(9,0)  RC(8,0)  RC(9,1)                             RC(8,3)                             RC(9,5)  RC(8,5)  RC(9,6)  RC(8,6)
         >;
     };
+
+	wakeup_source: wakeup_source {
+		compatible = "zmk,gpio-key-wakeup-trigger";
+		trigger = <&wakeup_key>;
+		wakeup-source;
+	};
+
 };
 
     &pinctrl {
