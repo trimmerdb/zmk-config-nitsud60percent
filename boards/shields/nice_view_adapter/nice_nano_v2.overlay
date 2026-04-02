@@ -9,27 +9,32 @@
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
                 <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_CS, 0, 22)>;
         };
     };
     spi0_sleep: spi0_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
                 <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_CS, 0, 22)>;
             low-power-enable;
         };
     };
 };
 
 nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
-};
-
-&pro_micro_i2c {
-    status = "disabled";
+    ssd1306@0 {
+        compatible = "solomon,ssd1306fb";
+        reg = <0>;
+        label = "SSD1306";
+        spi-max-frequency = <8000000>;
+        cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        prechargep = <0x22>;
+    };
 };
